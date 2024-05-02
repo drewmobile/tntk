@@ -9,7 +9,7 @@ aws ec2 modify-vpc-attribute --vpc-id $vpc_id --enable-dns-support "{\"Value\":t
 aws ec2 modify-vpc-attribute --vpc-id $vpc_id --enable-dns-hostnames "{\"Value\":true}"
 
 # tag the vpc
-aws ec2 create-tags --resources $vpc_id --tags Key=Name,Value=my_vpc
+aws ec2 create-tags --resources $vpc_id --tags Key=Name,Value=bash_vpc
 
 #wait for the vpc
 echo -n "waiting for vpc to become available"
